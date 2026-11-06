@@ -1,0 +1,32 @@
+combat:
+  # How long a player stays "in combat" after the last hit (seconds).
+  duration-seconds: 15
+  # Also tag a player when a mob hits them (default: PvP only).
+  tag-on-mob-damage: false
+  # Creative / spectator players are never tagged.
+  ignore-creative: true
+  # If true, being kicked while in combat also kills you. (Admin kicks are normally excused.)
+  punish-on-kick: false
+  # true = drop ALL of the player's XP when they die in combat (vanilla caps at 100 XP).
+  drop-full-xp: true
+  # The ONLY commands usable while in combat. (Namespaces like minecraft: are ignored.)
+  # msg/w/tell are the private-message commands; r/reply let you answer a message.
+  allowed-commands: [msg, w, tell, r, reply]
+
+# Blocked for EVERYONE, ALWAYS, including OPs, in or out of combat.
+# Aliases and namespaced forms (bukkit:plugins, paper:ver ...) are caught too.
+always-blocked-commands: [plugins, pl, version, ver, about, icanhasbukkit]
+
+apples:
+  enabled: true
+  # Extra chance for a leaf block to drop an apple. Vanilla oak is 0.005 (0.5%).
+  chance: 0.05
+  leaf-types: [OAK_LEAVES, DARK_OAK_LEAVES]
+
+messages:
+  combat-start: "<red>⚔ You are in combat for <white><seconds>s</white>! Logging out will kill you."
+  combat-end: "<green>You are no longer in combat."
+  actionbar: "<red>⚔ In combat: <white><seconds>s"
+  command-blocked-combat: "<red>You can't use that command while in combat!"
+  command-blocked-always: "<red>That command is disabled."
+  combat-log-death: "<red><player> <gray>died for combat logging."

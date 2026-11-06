@@ -1,0 +1,15 @@
+name: CombatCore
+version: '${project.version}'
+main: dev.combatcore.CombatCore
+bootstrapper: dev.combatcore.CombatBootstrap
+api-version: '26.3'
+description: Combat tagging, command lock, combat-log punishment, death rules, better apples, /cr recipe editor and kill achievements.
+authors: [CombatCore]
+
+permissions:
+  combatcore.recipes:
+    description: Use the /cr recipe editor
+    default: op
+  combatcore.bypass:
+    description: Ignore the in-combat command lock (never bypasses the /plugins and /version block)
+    default: false
